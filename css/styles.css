@@ -1,0 +1,66 @@
+/* Reset CSS */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote{
+    padding: 0; margin: 0; font-size: 100%; font-weight: normal;
+}
+table{ border-collapse: collapse; border-spacing: 0; }
+td, th, caption{ font-weight: normal; text-align: left; }
+img, fieldset{ border: 0; }
+ol{ padding-left: 1.4em; list-style: decimal; }
+ul{ padding-left: 1.4em; list-style: square; }
+q:before, q:after{ content: ''; }
+/*Termina el Reset CSS*/
+
+
+
+h1{
+    font-size: 5em;
+}
+.tienda{
+    background-color: pink;
+    width: 80%;
+    margin: 0 auto;
+}
+.cabecera{
+    display: flex;
+    justify-content: center;
+    border: 5px dotted black;
+}
+.cuerpo{
+    display: flex;
+}
+.productos{
+    border: 5px dashed red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.carrito{
+    border: 5px dashed darkmagenta;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:1%;
+}
+.claseListaCarrito{
+    font-size: 1.4em;
+    background-color: salmon;
+}
+.claseDivImagenes{
+    border: 5px solid blue;
+}
+.claseDivImagenes p{ /*Texto de los productos*/
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+}
+.claseDivImagenes p:nth-child(2){ /*Nombre producto*/
+    font-size: 2em;
+}
+.claseDivImagenes p:nth-child(3){ /*precio*/
+    background-color: red;
+}
+.pie{
+    border: 5px solid blueviolet;
+}
