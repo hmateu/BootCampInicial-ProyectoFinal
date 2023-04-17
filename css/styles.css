@@ -61,6 +61,11 @@ h1{
 .claseDivImagenes p:nth-child(3){ /*precio*/
     background-color: red;
 }
+.listado{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .pie{
     border: 5px solid blueviolet;
 }
