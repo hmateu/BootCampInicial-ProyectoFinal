@@ -32,7 +32,7 @@ productos.forEach((producto, i) => {
         <p>${producto.descripcion}</p>
         <p>${producto.precio} €</p>
     `;
-    divImagenes.classList.add("producto-"+i)
+    divImagenes.classList.add("producto-"+i);
     divImagenes.setAttribute("draggable", "true");
     divImagenes.setAttribute("ondragstart", "drag(event)");
     divProductos.appendChild(divImagenes);
@@ -44,8 +44,7 @@ function allowDrop(allowdropevent) {
 }
 
 function drag(dragevent) {
-    
-    dragevent.target.getAttribute("src") ?   this.productoSeleccionado = parseInt(dragevent.target.classList[0].split("-")[1]) :   this.productoSeleccionado = parseInt(dragevent.target.classList[1].split("-")[1])
+    dragevent.target.getAttribute("src") ?   this.productoSeleccionado = parseInt(dragevent.target.classList[0].split("-")[1]) :   this.productoSeleccionado = parseInt(dragevent.target.classList[1].split("-")[1]);
     dragevent.dataTransfer.setData("text", dragevent.target.id);
 }
 
@@ -55,14 +54,14 @@ function drop(dropevent) {
 }
 
 function escribirListaCarrito(frutaannadida){
-    productosEnCarrito.push(productos[frutaannadida])
-    refrescarCarrito()
+    productosEnCarrito.push(productos[frutaannadida]);
+    refrescarCarrito();
 }
 function refrescarCarrito(){
-    divCarrito.querySelector(".listado").innerHTML = ""
+    divCarrito.querySelector(".listado").innerHTML = "";
     productosEnCarrito.forEach(element=>{
         let listaCarrito = document.createElement("p");
-        listaCarrito.className = "claseListaCarrito"
+        listaCarrito.className = "claseListaCarrito";
         listaCarrito.innerHTML = `
     ${element.descripcion} - ${element.precio} € <button onclick='eliminarProducto(${productosEnCarrito.indexOf(element)})'>x</button>`;
         divCarrito.querySelector(".listado").appendChild(listaCarrito);
@@ -71,7 +70,7 @@ function refrescarCarrito(){
 }
 function eliminarProducto(index){
     productosEnCarrito.splice(index, 1);
-    refrescarCarrito()
+    refrescarCarrito();
 }
 
 function calcularPrecioTotal(){
@@ -81,5 +80,5 @@ function calcularPrecioTotal(){
     })
     document.querySelector(".total").innerHTML = `
         TOTAL: ${precioTotal.toFixed(2)} €
-    `
+    `;
 }
