@@ -16,39 +16,45 @@ h1{
     font-size: 5em;
 }
 .tienda{
-    background-color: pink;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
     width: 80%;
     margin: 0 auto;
 }
 .cabecera{
     display: flex;
     justify-content: center;
-    border: 5px dotted black;
+    margin-bottom: 2%;
 }
 .cuerpo{
     display: flex;
 }
 .productos{
-    border: 5px dashed red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    background-color: cadetblue;
 }
 .carrito{
-    border: 5px dashed darkmagenta;
     display: flex;
     justify-content: center;
     flex-direction: column;
     justify-content: flex-start;
     gap:1%;
+    border-left:2px solid black;
 }
 .claseListaCarrito{
     font-size: 1.4em;
     background-color: salmon;
+    display: flex;
+    justify-content: space-between;
 }
 .claseDivImagenes{
-    border: 5px solid blue;
+    border: 3px solid black;
+    border-radius: 10%;
+    margin: 2%;
+    background-color: white;
 }
 .claseDivImagenes p{ /*Texto de los productos*/
     font-size: 1.6em;
@@ -57,9 +63,7 @@ h1{
 }
 .claseDivImagenes p:nth-child(2){ /*Nombre producto*/
     font-size: 2em;
-}
-.claseDivImagenes p:nth-child(3){ /*precio*/
-    background-color: red;
+    border-bottom: 2px solid black;
 }
 .listado{
     display: flex;
@@ -67,5 +71,7 @@ h1{
     gap: 8px;
 }
 .pie{
-    border: 5px solid blueviolet;
+    background-color: black;
+    color: white;
+    margin-top: 2%;
 }
