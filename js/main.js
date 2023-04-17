@@ -80,6 +80,6 @@ function calcularPrecioTotal(){
         precioTotal += parseFloat(element.precio);
     })
     document.querySelector(".total").innerHTML = `
-        TOTAL: ${precioTotal} €
+        TOTAL: ${precioTotal.toFixed(2)} €
     `
 }
